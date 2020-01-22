@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="student.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://courses.cs.vt.edu/~cs1114/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path=""/>
+	<classpathentry exported="true" kind="lib" path="exception-doctor_1.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="BTtracker.jar"/>
+	<classpathentry exported="true" kind="lib" path="gnu-regexp-1.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="acm.jar"/>
+	<classpathentry exported="true" kind="lib" path="bsh.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-codec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="javazoom.jar"/>
+	<classpathentry exported="true" kind="lib" path="jgraph.jar"/>
+	<classpathentry exported="true" kind="lib" path="jmf.jar"/>
+	<classpathentry exported="true" kind="lib" path="mediacomp.jar"/>
+	<classpathentry exported="true" kind="lib" path="rome-0.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="serializer.jar"/>
+	<classpathentry exported="true" kind="lib" path="sound.jar"/>
+	<classpathentry exported="true" kind="lib" path="tagsoup-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="utils.jar"/>
+	<classpathentry exported="true" kind="lib" path="xalan.jar"/>
+	<classpathentry exported="true" kind="lib" path="xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="xpp3_min-1.1.4c.jar"/>
+	<classpathentry exported="true" kind="lib" path="xstream-1.3.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
