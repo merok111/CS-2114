@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry combineaccessrules="false" kind="src" path="/CS2114-Support"/>
+	<classpathentry exported="true" kind="lib" path="lib/GraphWindow.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://courses.cs.vt.edu/~cs2114/Spring2016/GraphWindow/JavaDocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
