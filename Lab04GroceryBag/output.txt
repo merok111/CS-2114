@@ -1,0 +1,1 @@
+[cereal, apples, chips, bread, potatoes]
