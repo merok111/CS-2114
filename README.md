@@ -8,8 +8,10 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Lab 03](https://github.com/crickon/CS-2114/tree/master/Lab%2003%20Movie%20Collections/src/collections)     | Movie Collections | Basically making an ArrayList |
 | [Lab 04](https://github.com/crickon/CS-2114/tree/master/Lab04GroceryBag/src/groceries)     | Grocery Bag | Array Based Bag and intersection |
 | [Lab 05](https://github.com/crickon/CS-2114/tree/master/Lab%2005%20Ice%20Cream%20Stack/src/icecream)     | Ice Cream Stack | Icecream cone implemented as a Stack |
+| [Lab 06](https://github.com/crickon/CS-2114/tree/master/Lab%2005%20Ice%20Cream%20Stack/src/icecream)     | Array Based Stack | Creating a Stack object with an array as its foundation |
 
 
 | Project    | Title | Description |
 | ------------- | ------------- | --------------------------------|
 | [Project 1](https://github.com/crickon/CS-2114/tree/master/CollectionDisplay/src/project1)     | Collection Display | Utilizing a Bag data structure and displaying its contents in a GUI |
+| [Project 2](https://github.com/crickon/CS-2114/tree/master/WhackAShape/src/game)     | Whack a Shape | Creating a game with linked list bags and array bags |
