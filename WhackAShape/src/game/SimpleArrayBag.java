@@ -91,7 +91,7 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
     /**
      * method to remove a specific entry from the array bag
      * 
-     * @param entry
+     * @param arg
      *            to be removed
      * 
      * @return true if successful in removing the entry, false if the entry is
