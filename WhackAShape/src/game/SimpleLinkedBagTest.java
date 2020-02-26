@@ -38,6 +38,8 @@ public class SimpleLinkedBagTest extends student.TestCase {
         assertEquals(this.emptyBag.getCurrentSize(), 0, 0.01);
         this.emptyBag.add(1);
         assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
+        assertFalse(this.emptyBag.add(null));
+        assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
     }
 
 
@@ -51,6 +53,10 @@ public class SimpleLinkedBagTest extends student.TestCase {
         assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
         this.emptyBag.remove(1);
         assertEquals(this.emptyBag.getCurrentSize(), 0, 0.01);
+        this.emptyBag.add(1);
+        this.emptyBag.add(2);
+        this.emptyBag.add(3);
+        assertEquals(this.emptyBag.getCurrentSize(), 3, 0.01);
     }
 
 
@@ -86,5 +92,11 @@ public class SimpleLinkedBagTest extends student.TestCase {
         assertTrue(this.emptyBag.remove(1));
         assertEquals(this.emptyBag.getCurrentSize(), 0, 0.01);
         assertFalse(this.emptyBag.remove(1));
+        assertFalse(this.emptyBag.remove(null));
+        assertFalse(this.emptyBag.remove(20));
+        this.emptyBag.add(1);
+        this.emptyBag.add(2);
+        this.emptyBag.add(3);
+        assertTrue(this.emptyBag.remove(3));
     }
 }

@@ -86,7 +86,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
         int index = new TestableRandom().nextInt(this.numberOfEntries);
         Node<T> current = this.firstNode;
         int count = 0;
-        while (current.next() != null && count < index) {
+        while (count < index) {
             count++;
             current = current.next();
         }
@@ -106,7 +106,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
     @Override
     public boolean remove(T arg) {
         Node<T> ref = this.getReferenceTo(arg);
-        if (arg == null || ref == null) {
+        if (ref == null) {
             return false;
         }
         T dat = this.firstNode.data();

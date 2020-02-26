@@ -99,6 +99,9 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
      */
     @Override
     public boolean remove(T arg) {
+        if (arg == null) {
+            return false;
+        }
         int i = this.getIndexOf(arg);
         if (i == -1) {
             return false;

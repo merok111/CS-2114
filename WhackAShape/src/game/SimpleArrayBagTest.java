@@ -37,6 +37,9 @@ public class SimpleArrayBagTest extends student.TestCase {
         assertEquals(this.emptyBag.getCurrentSize(), 0, 0.01);
         this.emptyBag.add(1);
         assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
+        assertFalse(this.emptyBag.add(null));
+        assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
+        assertFalse(this.fullBag.add(1));
     }
 
 
@@ -84,6 +87,12 @@ public class SimpleArrayBagTest extends student.TestCase {
         assertEquals(this.emptyBag.getCurrentSize(), 1, 0.01);
         assertTrue(this.emptyBag.remove(1));
         assertEquals(this.emptyBag.getCurrentSize(), 0, 0.01);
-        assertFalse(this.emptyBag.remove(1));
+        this.emptyBag.add(1);
+        this.emptyBag.add(2);
+        this.emptyBag.add(3);
+        this.emptyBag.add(4);
+        assertFalse(this.emptyBag.remove(null));
+        assertFalse(this.emptyBag.remove(200));
+
     }
 }
