@@ -194,4 +194,56 @@ public class ArrayBasedStackTest extends student.TestCase {
 
     }
 
+
+    public void testDebuggerViews()
+
+    {
+
+        // Put a breakpoint on the line below
+
+        ArrayBasedStack<String> testStack = new ArrayBasedStack<String>();
+
+        // Put a breakpoint on the line below. Use Step Over to see each push.
+
+        testStack.push("blizzard");
+
+        testStack.push("barrage");
+
+        testStack.push("deadeye");
+
+        testStack.push("resurrect");
+
+        assertTrue(testStack.toString().equals(
+            "[blizzard, barrage, deadeye, resurrect]"));
+        
+
+        // Put a breakpoint on the line below. Hit Step Over once to watch the
+        // pop.
+
+        testStack.pop();
+
+        assertTrue(testStack.toString().equals("[blizzard, barrage, deadeye]"));
+
+        Object[] toArrayResult = testStack.toArray();
+
+        // Drop a breakpoint on the line below.
+
+        // Use the debugger mode to compare toArrayResult to testStack.
+
+        assertTrue(toArrayResult[0].toString().equals("blizzard"));
+
+        assertEquals(toArrayResult.length, 3);
+
+        // The following test fails because the stack still has entries in it.
+        // However,
+
+        // "expected <true> but was: <false>" is not very helpful.
+
+        // Drop a breakpoint on the line below to see what the toString SHOULD
+        // look like.
+
+        assertTrue(testStack.toString().equals("[]"));
+
+    }
+
 }

@@ -137,6 +137,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
             if (dat.equals(arg)) {
                 return current;
             }
+            current = current.next();
         }
         return null;
     }

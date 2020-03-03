@@ -26,7 +26,6 @@ public class SimpleLinkedBagTest extends student.TestCase {
         for (int i = 0; i < 25; i++) {
             this.fullBag.add(i);
         }
-
     }
 
 
@@ -98,5 +97,6 @@ public class SimpleLinkedBagTest extends student.TestCase {
         this.emptyBag.add(2);
         this.emptyBag.add(3);
         assertTrue(this.emptyBag.remove(3));
+        assertFalse(this.emptyBag.remove(5));
     }
 }
