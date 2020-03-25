@@ -49,8 +49,10 @@ public class DiskTest extends TestCase {
         assertTrue(exception instanceof IllegalArgumentException);
 
         assertTrue(this.smaller.compareTo(this.bigger) < 0);
+        assertFalse(this.smaller.compareTo(this.bigger) > 0);
         assertTrue(this.bigger.compareTo(this.smaller) > 0);
-        assertTrue(this.smaller.compareTo(this.smaller) == 0);
+        assertFalse(this.bigger.compareTo(this.smaller) < 0);
+        assertEquals(this.smaller.compareTo(this.smaller), 0, 0.01);
     }
 
 

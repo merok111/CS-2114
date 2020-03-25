@@ -43,7 +43,7 @@ public class Tower extends LinkedStack<Disk> {
     /**
      * attempt to add a Disk to the top of the Tower
      * 
-     * @throws IllegalArgumentExeption
+     * @throws IllegalArgumentException
      *             if the disk is null
      * @throws IllegalStateException
      *             if the disk cannot be added to the Tower
