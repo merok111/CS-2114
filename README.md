@@ -17,3 +17,4 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | ------------- | ------------- | --------------------------------|
 | [Project 1](https://github.com/crickon/CS-2114/tree/master/CollectionDisplay/src/project1)     | Collection Display | Utilizing a Bag data structure and displaying its contents in a GUI |
 | [Project 2](https://github.com/crickon/CS-2114/tree/master/WhackAShape/src/game)     | Whack a Shape | Creating a game with linked list bags and array bags |
+| [Project 3](https://github.com/crickon/CS-2114/tree/master/TowerOfHanoi/src/towerofhanoi)     | Tower of Hanoi | Solving the Tower of Hanoi puzzle using a recursive algorithm |
