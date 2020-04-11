@@ -10,6 +10,10 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Lab 05](https://github.com/crickon/CS-2114/tree/master/Lab%2005%20Ice%20Cream%20Stack/src/icecream)     | Ice Cream Stack | Icecream cone implemented as a Stack |
 | [Lab 06](https://github.com/crickon/CS-2114/tree/master/Lab%2006%20ArrayBasedStack/src/arraystack)     | Array Based Stack | Creating a Stack object with an array as its foundation |
 | [Lab 07](https://github.com/crickon/CS-2114/tree/master/Lab07-Recursion/src/recursion)     | Recursion | Make recursive methods and practice useing recursion |
+| [Lab 08](https://www.youtube.com/watch?v=dQw4w9WgXcQ)     | Deque | I forgot to do this lab... whoops |
+| [Lab 09](https://github.com/crickon/CS-2114/tree/master/Lab%2009%20LinkedListEnhancedNewSkeleton/src/linkedlist)     | Linked List | Fix the mistakes in a linked structure implementation |
+| [Lab 10](https://github.com/crickon/CS-2114/tree/master/Lab10DoublyLinkedList/src/doublylinkedlist)     | Doubly Linked List | implement an iterator for a doubly linked list |
+
 
 
 
@@ -18,3 +22,5 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Project 1](https://github.com/crickon/CS-2114/tree/master/CollectionDisplay/src/project1)     | Collection Display | Utilizing a Bag data structure and displaying its contents in a GUI |
 | [Project 2](https://github.com/crickon/CS-2114/tree/master/WhackAShape/src/game)     | Whack a Shape | Creating a game with linked list bags and array bags |
 | [Project 3](https://github.com/crickon/CS-2114/tree/master/TowerOfHanoi/src/towerofhanoi)     | Tower of Hanoi | Solving the Tower of Hanoi puzzle using a recursive algorithm |
+| [Project 4]()     |  |  |
+
