@@ -360,6 +360,16 @@ public class DLList<E> {
     }
 
 
+    /**
+     * reverserIterator method creates Iterator object in the reverse direction
+     *
+     * @return new Iterator object
+     */
+    public Iterator<E> reverseIterator() {
+        return new RDLListIterator<E>(this);
+    }
+
+
     private class DLListIterator<E> implements Iterator<E> {
         private DLList<E> main;
         private Node<E> current;
@@ -422,6 +432,75 @@ public class DLList<E> {
             current.data = null;
             main.remove(index);
             index--;
+        }
+    }
+
+
+    private class RDLListIterator<E> implements Iterator<E> {
+        private DLList<E> main;
+        private Node<E> current;
+        private int index;
+
+
+        /**
+         * Creates a new RDLListIterator
+         */
+        public RDLListIterator(DLList<E> main) {
+            this.main = main;
+            this.current = main.tail;
+            index = main.size;
+        }
+
+
+        /**
+         * Checks if there are more elements in the list
+         * UNO CARD REVERSE REVERSE
+         *
+         * @return true if there are more elements in the list
+         */
+        @Override
+        public boolean hasNext() {
+            return current.previous != main.head;
+        }
+
+
+        /**
+         * Gets the next value in the list
+         * UNO CARD REVERSE REVERSE
+         *
+         * @return the next value
+         * @throws NoSuchElementException
+         *             if there are no nodes left in the list
+         */
+        @Override
+        public E next() {
+            if (hasNext()) {
+                current = current.previous;
+                index--;
+                return current.data;
+            }
+            else {
+                throw new NoSuchElementException();
+            }
+        }
+
+
+        /**
+         * Removes the last object returned with next() from the list
+         * UNO CARD REVERSE REVERSE
+         *
+         * @throws IllegalStateException
+         *             if next has not been called yet
+         *             and if the element has already been removed
+         */
+        @Override
+        public void remove() {
+            if (current.data == null) {
+                throw new IllegalStateException("descriptive message");
+            }
+            current.data = null;
+            main.remove(index);
+            index++;
         }
     }
 }

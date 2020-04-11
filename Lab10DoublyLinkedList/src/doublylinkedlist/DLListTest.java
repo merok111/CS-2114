@@ -29,6 +29,7 @@ public class DLListTest extends TestCase {
     public void setUp() {
         list = new DLList<String>();
         iteratorSetUp();
+        reverseIteratorSetUp();
     }
 
 
@@ -300,6 +301,9 @@ public class DLListTest extends TestCase {
     private Iterator listIter;
     private DLList<String> anotherList;
 
+    private Iterator emptyRevIter;
+    private Iterator listRevIter;
+
 
     /**
      * helper method to set up the iterator tests
@@ -311,6 +315,15 @@ public class DLListTest extends TestCase {
             this.anotherList.add(i + "");
         }
         this.listIter = anotherList.iterator();
+    }
+
+
+    /**
+     * helper method to set up the reverseIterator tests
+     */
+    private void reverseIteratorSetUp() {
+        this.emptyRevIter = new DLList<String>().reverseIterator();
+        this.listRevIter = anotherList.reverseIterator();
     }
 
 
@@ -401,6 +414,102 @@ public class DLListTest extends TestCase {
         e = null;
         try {
             this.listIter.remove();
+        }
+        catch (Exception exception) {
+            e = exception;
+        }
+        assertNotNull(e);
+        assertTrue(e instanceof IllegalStateException);
+    }
+
+
+    /**
+     * test the reverseIterator's hasNext method
+     */
+    public void testReverseIteratorHasNext() {
+        // true when the next node isn't the head SENTINEL node
+        assertFalse(emptyRevIter.hasNext());
+        assertTrue(listRevIter.hasNext());
+    }
+
+
+    /**
+     * test the reverseIterator's next method
+     */
+    public void testReverseIteratorNext() {
+        // empty iterator
+        Exception e = null;
+        try {
+            emptyRevIter.next();
+        }
+        catch (Exception exception) {
+            e = exception;
+        }
+        assertNotNull(e);
+        assertTrue(e instanceof NoSuchElementException);
+
+        // check that each next equals the objects added (z through a in
+        // alphabet order)
+        for (char i = 'z'; i >= 'a'; i--) {
+            String compare = i + "";
+            assertEquals(compare, listRevIter.next());
+        }
+
+        // now that all the objects have been looped through, even though the
+        // doubly linked list should loop forever, it should throw an error
+        e = null;
+        try {
+            listRevIter.next();
+        }
+        catch (Exception exception) {
+            e = exception;
+        }
+        assertNotNull(e);
+        assertTrue(e instanceof NoSuchElementException);
+    }
+
+
+    /**
+     * test the ReverseIterator's remove method
+     */
+    public void testReverseIteratorRemove() {
+        // empty
+        Exception e = null;
+        try {
+            this.emptyRevIter.remove();
+        }
+        catch (Exception exception) {
+            e = exception;
+        }
+        assertNotNull(e);
+        assertTrue(e instanceof IllegalStateException);
+
+        // no next called
+        e = null;
+        try {
+            this.listRevIter.remove();
+        }
+        catch (Exception exception) {
+            e = exception;
+        }
+        assertNotNull(e);
+        assertTrue(e instanceof IllegalStateException);
+
+        // remove success
+        assertEquals(26, this.anotherList.size(), 0.01);
+        for (int i = 0; i < 10; i++) {
+            // System.out.println(this.listRevIter.next());
+            this.listRevIter.next();
+        }
+        // q is the current
+        this.listRevIter.remove();
+        assertFalse(this.anotherList.contains("q"));
+        assertEquals(25, this.anotherList.size(), 0.01);
+
+        // error on remove after remove
+        e = null;
+        try {
+            this.listRevIter.remove();
         }
         catch (Exception exception) {
             e = exception;
