@@ -1,6 +1,6 @@
 package spacecolonies;
 
-public class TestSkills extends student.TestCase {
+public class SkillsTest extends student.TestCase {
     private Skills one;
     private Skills two;
     private Skills three;
