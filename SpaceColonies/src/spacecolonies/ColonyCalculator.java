@@ -9,7 +9,7 @@ public class ColonyCalculator {
 
     private ArrayQueue<Person> applicantQueue;
     private AList<Person> rejectBus;
-    private static Planet[] planets = new Planet[NUM_PLANETS + 1];
+    private static Planet[] planets = new Planet[NUM_PLANETS];
 
 
     public ColonyCalculator(ArrayQueue<Person> people, Planet[] planets) {
@@ -40,20 +40,25 @@ public class ColonyCalculator {
         Planet pref = null;
         Planet mostAvailible = null;
         for (Planet planet : planets) {
-            if (pref == null && planet.getName().equals(preference) && !planet
-                .isFull()) {
-                pref = planet;
-            }
-            if (planet.compareTo(mostAvailible) >= 0) {
-                mostAvailible = planet;
+            if (planet != null) {
+                if (pref == null && planet.getName().equals(preference)
+                    && !planet.isFull()) {
+                    pref = planet;
+                }
+                if (planet.compareTo(mostAvailible) >= 0) {
+                    mostAvailible = planet;
+                }
             }
         }
-        if (pref == null) {
-            if (mostAvailible == null || mostAvailible.isFull()) {
+        if (pref == null || pref.isFull() || !pref.isQualified(nextPerson)) {
+            if (mostAvailible == null || mostAvailible.isFull()
+                || !mostAvailible.isQualified(nextPerson)) {
                 return null;
             }
+            System.out.println(mostAvailible.getName());
             return mostAvailible;
         }
+        System.out.println(pref.getName());
         return pref;
     }
 
@@ -83,8 +88,9 @@ public class ColonyCalculator {
 
 
     public Planet planetByNumber(int planet) {
-        if (planet >= 1 || planet <= 3)
-            return planets[planet];
+        if (planet >= 1 && planet <= NUM_PLANETS) {
+            return planets[planet - 1];
+        }
         return null;
     }
 

@@ -1,6 +1,7 @@
 package spacecolonies;
 
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import bsh.ParseException;
 
@@ -11,7 +12,8 @@ public class ColonyReader {
 
     public ColonyReader(String applicantFileName, String planetFileName)
         throws ParseException,
-        SpaceColonyDataException {
+        SpaceColonyDataException,
+        FileNotFoundException {
         this.planets = this.readPlanetFile(planetFileName);
         this.queue = this.readQueueFile(applicantFileName);
         new SpaceWindow(new ColonyCalculator(queue, planets));
@@ -20,23 +22,25 @@ public class ColonyReader {
 
     private Planet[] readPlanetFile(String fileName)
         throws ParseException,
-        SpaceColonyDataException {
-        ArrayList<Planet> temp = new ArrayList<Planet>();
-        Scanner scanner = new Scanner(fileName);
+        SpaceColonyDataException,
+        FileNotFoundException {
+        Planet[] temp = new Planet[ColonyCalculator.NUM_PLANETS];
+        Scanner scanner = new Scanner(new File(fileName));
         int count = 0;
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
+            System.out.println(line);
             String[] split = line.split(",");
             try {
-                String name = split[0];
-                int ag = Integer.parseInt(split[1]);
-                int med = Integer.parseInt(split[2]);
-                int tech = Integer.parseInt(split[3]);
-                int cap = Integer.parseInt(split[4]);
+                String name = split[0].trim();
+                int ag = Integer.parseInt(split[1].trim());
+                int med = Integer.parseInt(split[2].trim());
+                int tech = Integer.parseInt(split[3].trim());
+                int cap = Integer.parseInt(split[4].trim());
                 if (!isInSkillRange(ag, med, tech)) {
                     throw new SpaceColonyDataException("");
                 }
-                temp.add(new Planet(name, ag, med, tech, cap));
+                temp[count] = new Planet(name, ag, med, tech, cap);
             }
             catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 throw new ParseException("Invalid Planet text Formatting");
@@ -51,30 +55,36 @@ public class ColonyReader {
                 "Does not meet required Planets");
         }
         scanner.close();
-        return (Planet[])temp.toArray();
+        return temp;
     }
 
 
     private ArrayQueue<Person> readQueueFile(String fileName)
         throws ParseException,
-        SpaceColonyDataException {
+        SpaceColonyDataException,
+        FileNotFoundException {
         ArrayQueue<Person> temp = new ArrayQueue<Person>();
-        Scanner scanner = new Scanner(fileName);
+        Scanner scanner = new Scanner(new File(fileName));
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
+            System.out.println(line);
             String[] split = line.split(",");
             try {
-                String name = split[0];
-                int ag = Integer.parseInt(split[1]);
-                int med = Integer.parseInt(split[2]);
-                int tech = Integer.parseInt(split[3]);
-                String pref = split[4];
+                String name = split[0].trim();
+                int ag = Integer.parseInt(split[1].trim());
+                int med = Integer.parseInt(split[2].trim());
+                int tech = Integer.parseInt(split[3].trim());
+                String pref = "";
+                if (split.length == 5) {
+                    pref = split[4].trim();
+                }
                 if (!isInSkillRange(ag, med, tech)) {
                     throw new SpaceColonyDataException("");
                 }
                 temp.enqueue(new Person(name, ag, med, tech, pref));
             }
             catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                e.printStackTrace();
                 throw new ParseException("Invalid Person text Formatting");
             }
             catch (SpaceColonyDataException e) {

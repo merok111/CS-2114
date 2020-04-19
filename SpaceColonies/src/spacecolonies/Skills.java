@@ -29,9 +29,9 @@ public class Skills {
 
 
     public boolean isBelow(Skills other) {
-        return this.agriculture <= other.agriculture
-            && this.medicine <= other.medicine
-            && this.technology <= other.technology;
+        return this.agriculture < other.agriculture
+            && this.medicine < other.medicine
+            && this.technology < other.technology;
     }
 
 

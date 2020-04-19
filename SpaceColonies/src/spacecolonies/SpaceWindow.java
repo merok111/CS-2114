@@ -41,23 +41,42 @@ public class SpaceWindow {
         this.personInfo = new TextShape(PERSONINFOX, PERSONINFOY,
             "Player info panel");
         personInfo.setBackgroundColor(Color.white);
-        
+
         window.addShape(personInfo);
 
+        redraw();
+    }
+
+
+    private void redraw() {
+        Planet[] planets = colonyCalculator.getPlanets();
+        ArrayQueue<Person> people = colonyCalculator.getQueue();
+        Person next = people.getFront();
+        if (next != null) {
+            this.accept.enable();
+            this.personInfo.setText(next.toString());
+        }
+        else {
+            this.accept.disable();
+        }
     }
 
 
     public void clickedAccept(Button button) {
-        // redraw();
+        if (colonyCalculator.getQueue().isEmpty()) {
+            return;
+        }
+        boolean success = colonyCalculator.accept();
+        if (!success) {
+            System.out.println("failed");
+            this.accept.disable();
+        }
+        redraw();
     }
 
 
     public void clickedReject(Button button) {
-        // redraw();
-    }
-
-
-    public static void main(String... args) {
-        new SpaceWindow(null);
+        colonyCalculator.reject();
+        redraw();
     }
 }

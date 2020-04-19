@@ -33,10 +33,10 @@ public class Person {
         // concatenate the name, the first letter for each skill (in
         // alphabetical order) and a colon, then the skill value.
         StringBuilder builder = new StringBuilder();
-        builder.append(this.name);
+        builder.append(this.name + " ");
         builder.append(this.skills.toString());
         if (this.planetPreference.length() > 0) {
-            builder.append("Wants: " + this.planetPreference);
+            builder.append(" Wants: " + this.planetPreference);
         }
         return builder.toString();
     }

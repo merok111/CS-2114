@@ -17,6 +17,7 @@ public class Planet implements Comparable<Planet> {
         this.name = planetName;
         this.minSkills = new Skills(planetAgri, planetMedi, planetTech);
         this.capacity = planetCap;
+        this.population = new Person[capacity];
     }
 
 
@@ -70,7 +71,7 @@ public class Planet implements Comparable<Planet> {
     }
 
 
-    private boolean isQualified(Person applicant) {
+    public boolean isQualified(Person applicant) {
         return !applicant.getSkills().isBelow(this.minSkills);
     }
 
