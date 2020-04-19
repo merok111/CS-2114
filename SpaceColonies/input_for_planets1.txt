@@ -1,0 +1,23 @@
+Bob Marley, 5, 3, 1, Aggies
+Nikola Tesla, 2, 2, 5, Techies
+Leonard McCoy, 1, 5, 3, Meddies
+Michael Solley, 3, 2, 5, Aggies
+Georgann Trotter, 1, 4, 3, Techies
+Herbert Deforge, 5, 5, 5, Meddies
+Marva Buel, 1, 2, 1, Aggies
+Dian Cinnamon, 3, 1, 5, Nowhere
+Scottie Gebhardt, 1, 2, 2,
+Louella Voorhies, 3, 3, 1, Aggies
+Mandy Vaughns, 2, 4, 1, Meddies
+Marshall Mercedes, 5, 5, 5, Meddies
+Treva Emrick, 3, 2, 3, Aggies
+Abe Westbury, 1, 5, 3, Techies
+Lilla Alto, 4, 2, 1, Meddies
+Dewey Simpson, 3, 3, 3,
+Judy Corning, 1, 5, 3, Aggies
+Isis Resto, 2, 4, 4, Meddies
+Selma Mcnamee, 5, 4, 1, Aggies
+Margrett Murley, 3, 4, 5, Aggies
+Caitlin Bialek, 1, 4, 4, Meddies
+Jeannie Houle, 5, 2, 3, Meddies
+Sharilyn Zeno, 3, 3, 2, Meddies

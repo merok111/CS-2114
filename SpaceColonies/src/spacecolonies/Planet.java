@@ -108,6 +108,9 @@ public class Planet implements Comparable<Planet> {
 
     @Override
     public int compareTo(Planet other) {
+        if (other == null) {
+            return 1;
+        }
         return this.getAvailability() - other.getAvailability();
     }
 

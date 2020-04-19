@@ -1,0 +1,23 @@
+Bob Marley, 5, 5, 5, Planet1
+Nikola Tesla, 5, 5, 5, Planet2
+Leonard McCoy, 5, 5, 5, Planet3
+Michael Solley, 5, 5, 5, Planet1
+Georgann Trotter, 5, 5, 5, Planet2
+Herbert Deforge, 5, 5, 5, Planet3
+Marva Buel, 5, 5, 5, Planet1
+Dian Cinnamon, 5, 5, 5, Nowhere
+Scottie Gebhardt, 5, 5, 5, Planet3
+Louella Voorhies, 5, 5, 5, Planet1
+Mandy Vaughns, 5, 5, 5, Planet3
+Marshall Mercedes, 5, 5, 5, Planet3
+Treva Emrick, 5, 5, 5, Planet1
+Abe Westbury, 5, 5, 5, Planet2
+Lilla Alto, 5, 5, 5, Planet3
+Dewey Simpson, 5, 5, 5,
+Judy Corning, 5, 5, 5, Planet1
+Isis Resto, 5, 5, 5, Planet3
+Selma Mcnamee, 5, 5, 5, Planet1
+Margrett Murley, 5, 5, 5, Planet1
+Caitlin Bialek, 5, 5, 5, Planet2
+Jeannie Houle, 5, 5, 5, Planet2
+Sharilyn Zeno, 5, 5, 5, Planet3
