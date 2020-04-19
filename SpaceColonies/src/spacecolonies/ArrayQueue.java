@@ -51,7 +51,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
     private void ensureCapacity() {
         if (!this.maxCap()) {
             if (this.size == this.getLength() - 1) {
-                T[] temp = (T[])new Object[size * 2 + 1];
+                T[] temp = (T[])new Object[this.getLength() * 2];
                 for (int i = 0; i < this.getLength(); i++) {
                     temp[i] = this.queue[i];
                 }
@@ -83,7 +83,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 
     @SuppressWarnings("unchecked")
     public void clear() {
-        this.queue = (T[])new Object[DEFAULT_CAPACITY + 1];
+        this.queue = (T[])new Object[DEFAULT_CAPACITY];
         this.size = 0;
         this.enqueueIndex = 0;
         this.dequeueIndex = 0;

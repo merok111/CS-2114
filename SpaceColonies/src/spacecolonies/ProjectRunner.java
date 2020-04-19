@@ -12,7 +12,7 @@ public class ProjectRunner {
             new ColonyReader(args[0], args[1]);
         }
         else {
-            new ColonyReader("input.txt", "planets.txt");
+            new ColonyReader("inputAllAccept.txt", "planets.txt");
         }
     }
 }

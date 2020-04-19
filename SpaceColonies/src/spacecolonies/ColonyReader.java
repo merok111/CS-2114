@@ -29,7 +29,6 @@ public class ColonyReader {
         int count = 0;
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
-            System.out.println(line);
             String[] split = line.split(",");
             try {
                 String name = split[0].trim();
@@ -67,7 +66,6 @@ public class ColonyReader {
         Scanner scanner = new Scanner(new File(fileName));
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
-            System.out.println(line);
             String[] split = line.split(",");
             try {
                 String name = split[0].trim();
@@ -84,7 +82,6 @@ public class ColonyReader {
                 temp.enqueue(new Person(name, ag, med, tech, pref));
             }
             catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                e.printStackTrace();
                 throw new ParseException("Invalid Person text Formatting");
             }
             catch (SpaceColonyDataException e) {

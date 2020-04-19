@@ -72,7 +72,7 @@ public class Planet implements Comparable<Planet> {
 
 
     public boolean isQualified(Person applicant) {
-        return !applicant.getSkills().isBelow(this.minSkills);
+        return this.minSkills.isBelow(applicant.getSkills());
     }
 
 

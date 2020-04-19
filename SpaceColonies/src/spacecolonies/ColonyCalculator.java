@@ -27,7 +27,7 @@ public class ColonyCalculator {
     }
 
 
-    public Planet[] getPlanets() {
+    public static Planet[] getPlanets() {
         return planets;
     }
 
@@ -55,10 +55,8 @@ public class ColonyCalculator {
                 || !mostAvailible.isQualified(nextPerson)) {
                 return null;
             }
-            System.out.println(mostAvailible.getName());
             return mostAvailible;
         }
-        System.out.println(pref.getName());
         return pref;
     }
 
@@ -101,7 +99,7 @@ public class ColonyCalculator {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
 }
