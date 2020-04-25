@@ -5,5 +5,15 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CarranoDataStructuresLib"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CollectionDisplay"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CS2114-Support"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/httpasyncclient-4.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/httpclient-4.5.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/httpcore-4.4.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/httpcore-nio-4.4.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/httpmime-4.5.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/unirest-java/target/unirest-java-3.7.02.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mwgri/OneDrive/Documents/Github/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

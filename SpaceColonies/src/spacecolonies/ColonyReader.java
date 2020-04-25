@@ -1,3 +1,9 @@
+// Virginia Tech Honor Code Pledge:
+//
+// As a Hokie, I will conduct myself with honor and integrity at all times.
+// I will not lie, cheat, or steal, nor will I accept the actions of those who
+// do.
+// -- Matthew Grillo (mwgrillo)
 package spacecolonies;
 
 import java.io.File;
@@ -5,11 +11,33 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import bsh.ParseException;
 
+/**
+ * Class to read text files of information into planets and people
+ * 
+ * @author Matthew Grillo (mwgrillo)
+ * @version 4.19.2020
+ *
+ */
 public class ColonyReader {
     private Planet[] planets;
     private ArrayQueue<Person> queue;
 
 
+    /**
+     * Read a file list of planets and people into an arrayqueue of people and
+     * an array of planets
+     * 
+     * @param applicantFileName
+     *            file list of people
+     * @param planetFileName
+     *            file list of planets
+     * @throws ParseException
+     *             if the formatting of the lists is incorrect
+     * @throws SpaceColonyDataException
+     *             if the skills are not between 1 and 5
+     * @throws FileNotFoundException
+     *             if the file names can not find a file
+     */
     public ColonyReader(String applicantFileName, String planetFileName)
         throws ParseException,
         SpaceColonyDataException,
@@ -20,6 +48,19 @@ public class ColonyReader {
     }
 
 
+    /**
+     * helper method to read the planet file from the file name
+     * 
+     * @param fileName
+     *            file name
+     * @return Planet array
+     * @throws ParseException
+     *             if the formatting is incorrect
+     * @throws SpaceColonyDataException
+     *             if the skills are not between 1 and 5
+     * @throws FileNotFoundException
+     *             if the file name can not find a file
+     */
     private Planet[] readPlanetFile(String fileName)
         throws ParseException,
         SpaceColonyDataException,
@@ -58,6 +99,20 @@ public class ColonyReader {
     }
 
 
+    /**
+     * helper method to read a list of people from a file and create an
+     * ArrayQueue of Person objects from it
+     * 
+     * @param fileName
+     *            file name
+     * @return ArrayQueue of Persons
+     * @throws ParseException
+     *             if the file has invalid formatting
+     * @throws SpaceColonyDataException
+     *             if the skills are not between 1 and 5
+     * @throws FileNotFoundException
+     *             if the file can not be founds
+     */
     private ArrayQueue<Person> readQueueFile(String fileName)
         throws ParseException,
         SpaceColonyDataException,
@@ -93,6 +148,17 @@ public class ColonyReader {
     }
 
 
+    /**
+     * helper method to determine if the numbers are not between 1 and 5
+     * 
+     * @param num1
+     *            first number to check
+     * @param num2
+     *            second number to check
+     * @param num3
+     *            third number to check
+     * @return if all 3 number are within 1 and 5
+     */
     private boolean isInSkillRange(int num1, int num2, int num3) {
         int[] nums = { num1, num2, num3 };
         for (int num : nums) {

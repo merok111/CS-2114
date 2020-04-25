@@ -1,3 +1,9 @@
+// Virginia Tech Honor Code Pledge:
+//
+// As a Hokie, I will conduct myself with honor and integrity at all times.
+// I will not lie, cheat, or steal, nor will I accept the actions of those who
+// do.
+// -- Matthew Grillo (mwgrillo)
 package spacecolonies;
 
 import java.awt.Color;
@@ -9,6 +15,13 @@ import CS2114.Window;
 import CS2114.WindowSide;
 import list.AList;
 
+/**
+ * Create a Visual Representation for this Project
+ * 
+ * @author Matthew Grillo (mwgrillo)
+ * @version 4.19.2020
+ *
+ */
 public class SpaceWindow {
     public static final int PERSONINFOX = 5;
     public static final int PERSONINFOY = 5;
@@ -45,6 +58,13 @@ public class SpaceWindow {
     private final Color noPref = new Color(165, 209, 232);
 
 
+    /**
+     * Construct this class with a given ColonyCalculator to handle the project
+     * behind the scenes
+     * 
+     * @param calc
+     *            ColonyCalculator with the Person and Planet information
+     */
     public SpaceWindow(ColonyCalculator calc) {
         this.colonyCalculator = calc;
         this.window = new Window("Space Colony Placement");
@@ -62,6 +82,9 @@ public class SpaceWindow {
     }
 
 
+    /**
+     * helper method to create the planet visuals
+     */
     private void setUpPlanetVisual() {
         Planet[] planets = ColonyCalculator.getPlanets();
         int num = planets.length;
@@ -104,6 +127,9 @@ public class SpaceWindow {
     }
 
 
+    /**
+     * helper method to create the queue visuals
+     */
     private void setUpQueueVisual() {
         this.personInfo = new TextShape(PERSONINFOX, PERSONINFOY,
             "Player info panel");
@@ -142,6 +168,12 @@ public class SpaceWindow {
     }
 
 
+    /**
+     * helper method to redraw and update the visuals
+     * 
+     * @param remove
+     *            true if a Person has been removed since the last redraw
+     */
     private void redraw(boolean remove) {
         Planet[] planets = ColonyCalculator.getPlanets();
         ArrayQueue<Person> people = colonyCalculator.getQueue();
@@ -195,6 +227,12 @@ public class SpaceWindow {
     }
 
 
+    /**
+     * method to run when the Accept button is clicked
+     * 
+     * @param button
+     *            Button clicked
+     */
     public void clickedAccept(Button button) {
         if (colonyCalculator.getQueue().isEmpty()) {
             this.accept.disable();
@@ -207,6 +245,12 @@ public class SpaceWindow {
     }
 
 
+    /**
+     * method to run when the Reject button is clicked
+     * 
+     * @param button
+     *            Button clicked
+     */
     public void clickedReject(Button button) {
         if (colonyCalculator.getQueue().isEmpty()) {
             this.reject.disable();
