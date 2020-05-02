@@ -15,7 +15,8 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Lab 10](https://github.com/crickon/CS-2114/tree/master/Lab10DoublyLinkedList/src/doublylinkedlist)     | Doubly Linked List | implement an iterator for a doubly linked list |
 | [Lab 11](https://github.com/crickon/CS-2114/tree/master/Lab11Cybersecurity01_2019F/src/cybersecurity/lab1) | Cyber Security | basically just a linked map storing values at keys |
 | [Lab 12]() | We never had a lab 12...| |
-| [Lab 13](https://github.com/crickon/CS-2114/tree/master/Lab13TreeIntro/src/recursivetree) | Binary Tree | Creating recursive methods for a Binary Tree |
+| [Lab 13](https://github.com/crickon/CS-2114/tree/master/Lab13TreeIntro/src/recursivetree) | Recursive Tree | Creating recursive methods for a Tree |
+| [Lab 14](https://github.com/crickon/CS-2114/tree/master/Lab14BST/src/binarySearchTree) | Binary Search Tree | Binary Tree organized by comparing objects |
 
 
 
@@ -26,4 +27,6 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Project 2](https://github.com/crickon/CS-2114/tree/master/WhackAShape/src/game)     | Whack a Shape | Creating a game with linked list bags and array bags |
 | [Project 3](https://github.com/crickon/CS-2114/tree/master/TowerOfHanoi/src/towerofhanoi)     | Tower of Hanoi | Solving the Tower of Hanoi puzzle using a recursive algorithm |
 | [Project 4](https://github.com/crickon/CS-2114/tree/master/SpaceColonies/src/spacecolonies)     | Space Colonies | This project is a nightmare... It works properly but webcat never gave full credit for problem coverage |
+| Project 5 | Covid19 Visual | No actual code, just proof of concept |
 
+### El finito
