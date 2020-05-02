@@ -13,7 +13,7 @@ This repository contains my work in CS2114 at Virginia Tech (Software Design and
 | [Lab 08](https://www.youtube.com/watch?v=dQw4w9WgXcQ)     | Dequeue | I forgot to do this lab... whoops |
 | [Lab 09](https://github.com/crickon/CS-2114/tree/master/Lab%2009%20LinkedListEnhancedNewSkeleton/src/linkedlist)     | Linked List | Fix the mistakes in a linked structure implementation |
 | [Lab 10](https://github.com/crickon/CS-2114/tree/master/Lab10DoublyLinkedList/src/doublylinkedlist)     | Doubly Linked List | implement an iterator for a doubly linked list |
-| [Lab 11](https://github.com/crickon/CS-2114/tree/master/Lab11Cybersecurity01_2019F/src/cybersecurity/lab1) | Cyber Security | basically just linked map, storing values at keys |
+| [Lab 11](https://github.com/crickon/CS-2114/tree/master/Lab11Cybersecurity01_2019F/src/cybersecurity/lab1) | Cyber Security | basically just a linked map storing values at keys |
 | [Lab 12]() | We never had a lab 12...| |
 | [Lab 13](https://github.com/crickon/CS-2114/tree/master/Lab13TreeIntro/src/recursivetree) | Binary Tree | Creating recursive methods for a Binary Tree |
 
